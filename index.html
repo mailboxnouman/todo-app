@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #taskInput, .taskInput {
+      width: 60%;
+      padding: 10px;
+    }
+    
+    #taskDate, .taskDate{
+      margin-left: 10px;
+      padding: 10px;
+    }
+    #taskStartTime, #taskEndTime , .taskEndTime, .taskStartTime {
+      margin-left: 10px;
+      padding: 10px;
+    }
+    #addTaskBtn {
+      padding: 10px;
+      cursor: pointer;
+    }
+    #taskList {
+      list-style-type: none;
+      padding: 0;
+    }
+    .taskItem {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .editBtn, .saveBtn, .deleteBtn {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>To-Do App</h1>
+  
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <input type="date" id="taskDate">
+  <input type="time" id="taskStartTime">
+  <input type="time" id="taskEndTime">
+  <button id="addTaskBtn" onclick="addTask()">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
