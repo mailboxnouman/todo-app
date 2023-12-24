@@ -418,6 +418,9 @@ nav button {
   margin-bottom: 10px;
   padding: 0 20px;
   display: inline-block;
+  font-family: 'comic neue', sans-serif;
+
+ 
 }
 .taskItem textarea {
   margin-top: 10px;
@@ -426,7 +429,8 @@ nav button {
   line-height:  20px;
   height: 2rem;
   font-size: 1.2rem;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+
   overflow: hidden;
   resize: none;
 }
@@ -451,6 +455,8 @@ nav button {
   border: none;
   width: 24vw;
   text-align: center;
+  font-family: 'comic neue', sans-serif;
+
 
 }
 .taskEndTime:disabled,
@@ -468,6 +474,8 @@ nav button {
   border-radius: 25px;
   border: none;
 width: 17vw;
+font-family: 'comic neue', sans-serif;
+
 
 }
 
@@ -539,6 +547,7 @@ width: 29vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'comic neue', sans-serif;
 }
   .container4{
     background-color: #4044C9;
