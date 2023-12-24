@@ -491,6 +491,7 @@ font-family: 'comic neue', sans-serif;
   border-radius: 25px;
   border: none;
   padding: 15px;
+  resize: none;
   
 }
 .taskInput:disabled{
