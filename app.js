@@ -75,7 +75,7 @@ add.addEventListener("click", function() {
         // Logic for "Cancel" button state
         add.innerText = "Add new";
         container3.style.position = "absolute";
-        container3.style.animationName = "rgtToLft";
+        container3.style.animationName = "lftToRgt";
         container3.style.zIndex = "-1";
         container4.style.animationName = "btmToTop";
     } else {
@@ -85,7 +85,7 @@ add.addEventListener("click", function() {
         add.style.fontWeight = "600";
         add.style.fontSize = ".9rem";
         container3.style.position = "relative";
-        container3.style.animationName = "lftToRgt";
+        container3.style.animationName = "rgtToLft";
         container3.style.zIndex = "1";
         container4.style.animationName = "tpToBtm";
     }
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (taskInput.value.trim() !== "") {
         // Check if task date, start time, and end time are not empty
         if (taskDateInput.value === "" || taskStartTimeInput.value === "" || taskEndTimeInput.value === "") {
-          console.error("Error: Task date, start time, and end time must be provided.");
+          // console.error("Error: Task date, start time, and end time must be provided.");
           taskDateInput.style.outline = "2px solid red";
           taskStartTimeInput.style.outline = "2px solid red";
           taskEndTimeInput.style.outline = "2px solid red";
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (taskInput.value.trim() !== "") {
         var taskItem = document.createElement('li');
         taskItem.className = 'taskItem';
-        taskItem.style.animationName = "lftToRgt"
+        taskItem.style.animationName = "rgtToLft"
         taskItem.style.animationDuration = ".5s"
         
         var inputBox = document.createElement('textarea');
@@ -232,18 +232,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
           // taskItem.style.backgroundColor = "#4044C9"
-          taskItem.style.border = "2px solid #4044C9"
-          inputBox.style.border = "2px solid #4044C9"
+          // taskItem.style.border = "2px solid #4044C9"
+          inputBox.style.border = "1px solid #4044C9"
+          dateInputBox.style.border = "1px solid #4044C9"
+          startTimeInputBox.style.border = "1px solid #4044C9"
+          endTimeInputBox.style.border = "1px solid #4044C9"
           // taskItem.style.color = "white"
           // inputBox.style.backgroundColor = "#4044C9"
           // inputBox.style.color = "white"
-          // dateInputBox.style.backgroundColor = "#4044C9"
           // dateInputBox.style.border = "1px solid #4044C9"
           // dateInputBox.style.color = "white"
-          // startTimeInputBox.style.backgroundColor = "#4044C9"
           // startTimeInputBox.style.border = "1px solid #4044C9"
           // startTimeInputBox.style.color = "white"
-          // endTimeInputBox.style.backgroundColor = "#4044C9"
           // endTimeInputBox.style.border = "1px solid #4044C9"
           // endTimeInputBox.style.color = "white"
 
@@ -272,8 +272,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         saveBtn.onclick = function() {
 
-          taskItem.style.border = "none"
+
           inputBox.style.border = "none"
+          dateInputBox.style.border = "none"
+          startTimeInputBox.style.border = "none"
+          endTimeInputBox.style.border = "none"
+          // taskItem.style.border = "none"
+          // inputBox.style.border = "none"
           // taskItem.style.backgroundColor = "white"
           // taskItem.style.border = "none"
           // taskItem.style.color = "black"
@@ -316,8 +321,13 @@ document.addEventListener("DOMContentLoaded", function() {
         deleteBtn.className = 'deleteBtn';
         deleteBtn.innerHTML = ' <i class="fa-solid fa-circle-xmark"></i>';
         deleteBtn.onclick = function() {
-          taskList.removeChild(taskItem);
+          taskItem.style.animationName = "rgtToLft-2"
+          taskItem.style.animationDuration = ".5s"
+          setTimeout(function () {
+            taskList.removeChild(taskItem);
           checkListItems();
+          }, 500);
+          
         };
 
         taskItem.appendChild(editBtn);

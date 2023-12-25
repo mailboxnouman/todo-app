@@ -168,7 +168,7 @@ nav button {
   }
 
   .hidden {
-    transform: translateX(-100vh);
+    transform: translatey(-100vh);
     position: absolute;
     margin-left: -20px;
     margin-top: -20px;
@@ -202,7 +202,7 @@ nav button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 40px;
     width: 90vw;
     justify-self: center;
     margin: 0 auto;
@@ -345,7 +345,7 @@ nav button {
     animation-duration: 1s;
     
   }
-  @keyframes lftToRgt {
+  @keyframes rgtToLft {
     from {
       transform: translatex(100vw);
     }
@@ -354,6 +354,16 @@ nav button {
       transform: translatex(0vw);
     }
   }
+  @keyframes rgtToLft-2 {
+    from {
+      transform: translatex(0vw);
+    }
+
+    to {
+      transform: translatex(-100vw);
+    }
+  }
+
   @keyframes tpToBtm {
     from {
       transform: translatey(-20vh);
@@ -363,7 +373,7 @@ nav button {
       transform: translatey(0vh);
     }
   }
-  @keyframes rgtToLft {
+  @keyframes lftToRgt {
     from {
       transform: translatex(0vw);
     }
@@ -421,6 +431,9 @@ nav button {
   font-family: 'comic neue', sans-serif;
 
  
+}
+.taskItem textarea:focus {
+  outline: none;
 }
 .taskItem textarea {
   margin-top: 10px;
@@ -576,7 +589,7 @@ width: 29vw;
     height: 80px;
     width: auto;
     border-radius: 40px;
-    box-shadow:  0px 0px 5px 2px rgba(0, 0, 0, 0.02);
+    box-shadow:  0px 0px 5px 2px rgba(0, 0, 0, 0.07);
     /* background-color: #4044C9; */
   }
   
