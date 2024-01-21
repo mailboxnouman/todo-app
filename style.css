@@ -182,7 +182,9 @@ background-color: #4044C9;
   color: white;
   font-size: 1.3rem;
 }
-
+.icon  img{
+  width: 1.3rem;
+}
 .container2{
   margin: 10px 20px;
   background-color: #4044C9;
@@ -381,11 +383,12 @@ font-family: 'comic neue', sans-serif;
 
 }
 
-.editBtn,
-.saveBtn,
-.deleteBtn {
+span.editBtn,
+span.saveBtn,
+span.deleteBtn {
 font-size: .8rem;
-margin-left: 4px;
+padding: 0px 5px;
+/* transform: translateY(20px); */
 cursor: pointer;
 }
 
@@ -434,6 +437,7 @@ height: 40px;
 display: flex;
 justify-content: center;
 align-items: center;
+cursor: pointer;
 /* margin-right: ; */
 }
 .addBtn button{
