@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-Do App</title>
+  <link rel="icon" href="icon.svg" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -12,113 +13,123 @@
 </head>
 
 <body>
-  <section class="container1">
-    <div class="hide">
+  <div class="wrapper" id="wrapper">
+    <section class="container1">
 
-      <div class="hidden " id="menu">
-        <p>To Do App</p>
-        <ul>
-          <li><a href="">How it works</a> </li>
-          <li><a href="">Download</a></li>
-          <li><a href="">Upgrade</a></li>
-          <li><a href="">Feedback</a> </li>
-          <li class="loginLi"><a href="">Login / Register</a> </li>
-        </ul>
+      <div class="hide">
 
+        <div class="hidden " id="menu">
+          <p>To Do App</p>
+          <ul>
+            <li><a href="">How it works</a> </li>
+            <li><a href="">Download</a></li>
+            <li><a href="">Upgrade</a></li>
+            <li><a href="">Feedback</a> </li>
+            <li class="loginLi"><a href="">Login / Register</a> </li>
+          </ul>
+
+        </div>
       </div>
-    </div>
-    <!-- <div id="forFixTop" style="height: 70px;"></div> -->
-    <nav class="navbar">
-      <button id="menu-btn" class="hamburger">
-        <span class="hamburger-top" id="top"></span>
-        <span class="hamburger-middle" id="middle"></span>
-        <span class="hamburger-bottom" id="bottom"></span>
-      </button>
-      <div class="time">
-        <p id="time">Time</p>
-      </div>
-      <div class="icon">
-        <a href=""><i class="fa-regular fa-bell"></i></a>
-      </div>
-      <!-- <i class="fa-solid fa-bars fa-xl"></i> -->
-
-
       <div class="list">
+
         <ul>
           <li><a href="">How it works </a></li>
           <li><a href="">Download</a></li>
           <li><a href=""> Upgrade
               <!-- <div class="theme-dropdown">
-                    <span id="theme-btn">Themes</span>
-                    <ul id="theme-menu">
-                        <li id="theme-item-1"><a href="#">Theme 1</a></li>
-                        <li id="theme-item-2"><a href="#">Theme 2</a></li>
-                        <li id="theme-item-3"><a href="#">Theme 3</a></li>
-                        <li id="theme-item-4"><a href="#">Theme 4</a></li>
-                    </ul>
-                </div>  -->
+                  <span id="theme-btn">Themes</span>
+                  <ul id="theme-menu">
+                      <li id="theme-item-1"><a href="#">Theme 1</a></li>
+                      <li id="theme-item-2"><a href="#">Theme 2</a></li>
+                      <li id="theme-item-3"><a href="#">Theme 3</a></li>
+                      <li id="theme-item-4"><a href="#">Theme 4</a></li>
+                  </ul>
+              </div>  -->
             </a> </li>
           <li><a href="">Feedback</a> </li>
           <li class="loginLi"><a href="">Login / Register</a> </li>
         </ul>
 
       </div>
-    </nav>
-  </section>
-  <section class="container2">
-    <div class="header">
-      <div class="day">
-        <p  id="day">today</p>
+      <!-- <div id="forFixTop" style="height: 70px;"></div> -->
+      <nav class="navbar">
+        <p class="logoTxt">To Do</p>
+        <button id="menu-btn" class="hamburger">
+          <span class="hamburger-top" id="top"></span>
+          <span class="hamburger-middle" id="middle"></span>
+          <span class="hamburger-bottom" id="bottom"></span>
+        </button>
+        <div class="time">
+          <p id="time">Time</p>
+        </div>
+        <div class="icon">
+          <a href=""><i class="fa-regular fa-bell"></i></a>
+        </div>
+        <!-- <i class="fa-solid fa-bars fa-xl"></i> -->
+
+
+
+      </nav>
+    </section>
+    <section class="container2">
+      <div class="header">
+        <div class="day">
+          <p id="day">today</p>
+        </div>
+        <div class="add" id="add">
+          <p>Add New</p>
+        </div>
       </div>
-      <div class="add" id="add">
-        <p>Add New</p>
+    </section>
+    <section class="container3" id="container3">
+      <div class="addTask">
+        <div class="addText">
+          <textarea name="text" id="taskInput" cols="20" rows="1" placeholder="Enter a task"></textarea>
+        </div>
+        <div class="addTime">
+          <div>
+            <p>Task Date</p>
+            <input type="date" id="taskDate">
+          </div>
+          <div>
+            <p>Start Time</p>
+            <input type="time" id="taskStartTime">
+          </div>
+          <div>
+            <p>End Time</p>
+            <input type="time" id="taskEndTime">
+          </div>
+        </div>
+        <div class="addBtn">
+          <button id="addTaskBtn" onclick="addTask()">Add Task</button>
+
+        </div>
       </div>
-    </div>
-  </section>
-  <section class="container3" id="container3">
-    <div class="addTask">
-      <div class="addText">
-        <textarea name="text" id="taskInput" cols="20" rows="1" placeholder="Enter a task"></textarea>
-       </div>
-       <div class="addTime">
-       <div> <p>Task Date</p>
-        <input type="date" id="taskDate"></div>
-        <div> <p>Start Time</p>
-  <input type="time" id="taskStartTime">
+
+
+    </section>
+
+    <section class="container4" id="container4">
+      <div class="main">
+        <div class="calendar">
+          <p>Today's Task</p>
+        </div>
+        <div class="taskList">
+          <ul id="taskList">
+            <p id="noElFound">There are no tasks <br><span>To add a task, press the <b> 'Add New' </b> button </span>
+            </p>
+
+
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+
   </div>
-  <div> <p>End Time</p>
-  <input type="time" id="taskEndTime">
-  </div>
-       </div>
-       <div class="addBtn">
-        <button id="addTaskBtn" onclick="addTask()">Add Task</button>
-
-       </div>
-    </div>
-    
-  
-  </section>
-
-  <section class="container4" id="container4">
-    <div class="main">
-      <div class="calendar">
-        <p>Today's Task</p>
-      </div>
-      <div class="taskList">
-        <ul id="taskList">
-          <p id="noElFound">There are no tasks <br><span>To add a task, press the <b> 'Add New' </b> button </span></p>
-          
-            
-        </ul>
-
-      </div>
-    </div>
-  </section>
 
 
-  
-
-  
 
   <script src="app.js"></script>
 </body>
